@@ -16,7 +16,8 @@ export default async function Home() {
     const projects = allProjects;
 
   return (
-    <div className="flex flex-col gap-12 md:gap-18">
+    <>
+    <div className="flex flex-col flex-grow gap-12 md:gap-18">
       <div className="flex animate-in flex-col gap-8">
         <div>
           <h1 className="animate-in text-3xl font-bold tracking-tight text-primary">
@@ -146,8 +147,8 @@ export default async function Home() {
           </div>
         </Section>
       </div>
-
     </div>
+    </>
   );
 }
 
@@ -164,7 +165,7 @@ const workplaces = [
     title: "Full-Stack Developer Intern",
     company: "Method:CRM",
     time: "Apr 2023 - Jan 2024",
-    imageSrc: sourcedFactLogo,
+    imageSrc: methodLogo,
     link: "https://www.method.me/",
   },
   {

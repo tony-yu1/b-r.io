@@ -107,7 +107,7 @@ input:-webkit-autofill:focus {
   top: 50%;
   translate: -50% -50%;
   border-radius: 50%;
-  background: linear-gradient(to right, aquamarine, mediumpurple);
+  background: linear-gradient(to right, aquamarine, rgb(162, 115, 255));
   animation: rotate 20s infinite;
   opacity: 0.5;
   pointer-events: none;
