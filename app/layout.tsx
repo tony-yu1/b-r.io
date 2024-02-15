@@ -6,6 +6,7 @@ import clsx from "clsx";
 import BlobComponent from "@/components/Blob";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -41,9 +42,9 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-        {/* <Analytics /> */}
         <BlobComponent />
         </div>
+        <SpeedInsights />
 
       </body>
     </html>
