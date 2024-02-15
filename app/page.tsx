@@ -1,36 +1,18 @@
 import Image from "next/image";
 import Link from "@/components/ui/Link";
-import { allPosts } from ".contentlayer/generated";
-
-import Stats from "@/components/Stats";
-import { ArrowUpRightIcon } from "@heroicons/react/20/solid";
-import Avatar from "@/public/avatar.png";
-import { Metadata } from "next";
-
 import Section from "@/components/Section";
 import ConnectLinks from "@/components/ConnectLinks";
 
 import Workplaces from "@/components/Workplaces";
+import sourcedFactLogo from "public/work/sourcedfact.jpeg";
+import methodLogo from "public/work/method.jpeg";
 
-import hinesLogo from "public/work/hines-logo.jpeg";
-import perishipLogo from "public/work/periship-logo.jpeg";
-import camsLogo from "public/work/cams-logo.png";
-import uhdLogo from "public/work/uhd.png";
-
-import meLily from "public/gallery/me-lily.jpg";
-import colorado from "public/gallery/colorado.jpg";
 import clsx from "clsx";
-import { allProjects, Project } from ".contentlayer/generated";
+import { allProjects } from ".contentlayer/generated";
 import Halo from "@/components/ui/Halo";
 
 export default async function Home() {
-  const posts = allPosts
-    .sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
-    )
-    // 3 most recent
-    .filter((_, i) => i < 3);
+
     const projects = allProjects;
 
   return (
@@ -54,12 +36,12 @@ export default async function Home() {
         style={{ "--index": 3 } as React.CSSProperties}
       >      <Section heading="About" headingAlignment="left">
           <div className="flex flex-col gap-4">
-            <p>Hi! I&apos;m currently a student at the University of Waterloo 
-          studying Computer Engineering with a specialization in Artificial Intelligence.</p>
+            <p>Hi! I&apos;m currently a student at the <span className="magic-text">University of Waterloo </span>  
+           studying Computer Engineering with a specialization in Artificial Intelligence.</p>
 
             <p>
-            I have around 16 months of internship experience in the software
-          development space, and I&apos;m eager to keep learning and grow in this exciting industry!
+            I have around 16 months of internship experience in the <span className="magic-text">software
+          development </span> space, and I&apos;m eager to keep learning and grow in this exciting industry!
             </p>
             <p>
               Outside of school and work, I enjoy photography, basketball, skiing, music, and traveling.
@@ -73,7 +55,8 @@ export default async function Home() {
               Django, .NET, SQL, MongoDB, AWS, Redis, and Docker, just to name a few. 
             </p>
             <p>
-              I am always eager to learn new technologies and tools!
+              I believe that the most important quality in a software engineer is to always be 
+              <span className="magic-text"> eager to learn</span>.
             </p>
             <p></p>
             <Workplaces items={workplaces} />
@@ -175,21 +158,21 @@ const workplaces = [
     title: "Software Engineer Intern",
     company: "SourcedFact",
     time: "Jan 2024 - Present",
-    imageSrc: perishipLogo,
+    imageSrc: sourcedFactLogo,
     link: "https://sourcedfact.com/",
   },
   {
     title: "Full-Stack Developer Intern",
     company: "Method:CRM",
     time: "Apr 2023 - Jan 2024",
-    imageSrc: perishipLogo,
+    imageSrc: sourcedFactLogo,
     link: "https://www.method.me/",
   },
   {
     title: "Automation Developer Intern",
     company: "Method:CRM",
     time: "Jan 2023 - Apr 2023",
-    imageSrc: uhdLogo,
+    imageSrc: methodLogo,
     link: "https://www.method.me/",
   },
 ];

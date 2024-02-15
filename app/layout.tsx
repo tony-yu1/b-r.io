@@ -41,7 +41,7 @@ export default function RootLayout({
             {children}
           </div>
         </ThemeProvider>
-        <Analytics />
+        {/* <Analytics /> */}
         <BlobComponent />
         </div>
 

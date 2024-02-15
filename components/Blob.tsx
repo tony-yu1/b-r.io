@@ -16,7 +16,7 @@ const BlobComponent = () => {
     }, [])
     return (
         <>
-            <div className='blob blur-[150px] duration-700	ease-in-out' ref={cursorRef}>
+            <div className='blob blur-[150px] duration-1000	ease-out' ref={cursorRef}>
     </div>
         </>
 
