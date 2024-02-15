@@ -98,7 +98,6 @@ export default async function Home() {
                 >
                   {project.title}
                 </Link>
-                <time className="text-secondary"> · {project.time}</time>
               </div>
 
               <p className="line-clamp-3 text-tertiary">
