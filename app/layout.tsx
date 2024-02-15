@@ -3,16 +3,14 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import clsx from "clsx";
-
+import BlobComponent from "@/components/Blob";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navigation from "@/components/Navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Home | Brian Ruiz",
-  description:
-    "I am a full-stack software engineer who basically just enjoys creating things.",
+  title: "Tony's Website"
 };
 
 export default function RootLayout({
@@ -33,7 +31,7 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
-          <Navigation />
+
           <div
             className={
               "px-6 md:px-6 pt-16 pb-24 md:pt-20 md:pb-44 max-w-[700px] mx-auto"
@@ -43,6 +41,7 @@ export default function RootLayout({
           </div>
         </ThemeProvider>
         <Analytics />
+        <BlobComponent />
       </body>
     </html>
   );
