@@ -64,11 +64,9 @@ export default async function Home() {
         </Section>
 
         <Section heading="Projects" headingAlignment="left">
-        <div className="flex flex-col gap-8">
-  
-      </div>
+        <div className="flex flex-col gap-7">
       <ul
-        className="animate-in flex flex-col animated-list"
+        className="animate-in flex flex-col w-full animated-list"
         style={{ "--index": 3 } as React.CSSProperties}
       >
         {projects.map((project, i) => (
@@ -110,6 +108,8 @@ export default async function Home() {
           </li>
         ))}
       </ul>
+      </div>
+
     </Section>
 
         <Section heading="Connect" headingAlignment="left">
