@@ -16,6 +16,9 @@ module.exports = {
       },
     },
     extend: {
+      transitionDuration: {
+        '2000': '2000ms',
+      },
       textColor: {
         primary: "var(--gray-12)",
         secondary: "var(--gray-11)",
