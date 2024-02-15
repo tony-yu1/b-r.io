@@ -2,32 +2,22 @@
 
 import React, { useEffect, useRef } from 'react';
 
+
 const BlobComponent = () => {
     const cursorRef = useRef(null)
     useEffect(() => {
     if (cursorRef.current == null || cursorRef == null)
          return;
-    document.addEventListener('mousemove', e => {
+        document.addEventListener('mousemove', e => {
         if (cursorRef.current == null)
             return;
-        (cursorRef.current as HTMLElement).setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;")
-    })
-    document.addEventListener('click', () => {
-        if (cursorRef.current == null)
-            return;
-        (cursorRef.current as HTMLElement).classList.add("expand");
-        setTimeout(() => {
-            if (cursorRef.current == null)
-                return;
-            (cursorRef.current as HTMLElement).classList.remove("expand");
-        }, 500)
+        (cursorRef.current as HTMLElement).setAttribute("style", "top: " + (e.pageY) + "px; left: " + (e.pageX) + "px;");
     })
     }, [])
     return (
         <>
-            <div className='blob' ref={cursorRef}>
+            <div className='blob blur-[150px] duration-700	ease-in-out' ref={cursorRef}>
     </div>
-    <div className="blur"></div>
         </>
 
     )    

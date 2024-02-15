@@ -26,6 +26,7 @@ export default function RootLayout({
           "antialiased bg-white dark:bg-black text-primary width-full"
         )}
       >
+        <div className="backdrop-blur-sm">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
@@ -42,6 +43,8 @@ export default function RootLayout({
         </ThemeProvider>
         <Analytics />
         <BlobComponent />
+        </div>
+
       </body>
     </html>
   );
