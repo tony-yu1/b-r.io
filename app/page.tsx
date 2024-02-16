@@ -78,8 +78,8 @@ export default async function Home() {
             )}
           >
             <Link
-              href={`/projects/${project.slug}`}
-              className="w-full md:w-2/5 aspect-video bg-tertiary rounded-lg border border-secondary overflow-clip select-none"
+                  href={project.url || ''}
+                  className="w-full md:w-2/5 aspect-video bg-tertiary rounded-lg border border-secondary overflow-clip select-none"
             >
               <Halo strength={10}>
                 <Image
@@ -94,7 +94,7 @@ export default async function Home() {
             <div className="w-full md:w-3/5 space-y-2">
               <div>
                 <Link
-                  href={`/projects/${project.slug}`}
+                  href={project.url || ''}
                   className="text-primary font-medium hover:underline"
                 >
                   {project.title}
